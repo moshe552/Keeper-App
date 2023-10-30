@@ -8,14 +8,13 @@ export default function App() {
   return (
     <>
       <Header />
-      <>
-        {notes.map((note) => (
-          <Note 
-             key={note.id} 
-             noteText={note.noteText} 
-          />
-        ))}
-      </>
+      {notes.map((note) => (
+        <Note
+          key={note.id} 
+          title={note.title} 
+          content={note.content}
+        />
+      ))}
       <Footer />
     </>
   );
